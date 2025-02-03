@@ -20,9 +20,6 @@ function RootLayout() {
                     <span>GEN AI</span>
                     </Link>
                     <div className="user">
-                    <SignedOut>
-                        <SignInButton />
-                    </SignedOut>
                     <SignedIn>
                         <UserButton />
                     </SignedIn>
