@@ -1,0 +1,23 @@
+.rootLayout{
+padding: 16px 44px;
+height: 100vh;
+}
+
+.rootLayout header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+    gap: 8px;
+}
+
+.logo img{
+    height: 70px;
+    padding-top: 10px;
+}
