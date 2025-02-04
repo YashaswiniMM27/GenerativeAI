@@ -17,7 +17,7 @@ function RootLayout() {
                 <header>
                     <Link className='logo' to="/">
                     <img src="/assets/favicon.webp" alt="Logo" />
-                    <span>GEN AI</span>
+                    <span>GEN-AI</span>
                     </Link>
                     <div className="user">
                     <SignedIn>
