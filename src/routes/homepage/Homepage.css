@@ -1,0 +1,221 @@
+.homepageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.homepageSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/landingpage-bg.avif");
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    flex-grow: 1;
+    margin-top: 120px;
+}
+
+@media (max-width: 1024px){
+    .homepage{
+        flex-direction: column;
+        gap: 70px;
+    }
+}
+
+@media (max-width: 430px){
+    .homepage{
+        gap: 40px;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+}
+
+.left h1 {
+    font-size: 72px;
+    font-weight: bold;
+    text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(rgb(241, 70, 184), rgb(41, 1, 104));
+    color: transparent;
+    background-clip: text;
+}
+
+@media (max-width: 430px){
+    .left h1 {
+        font-size: 42px;
+    }
+}
+
+.homepage .left h2 {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@media (max-width: 430px){
+    .homepage .left h2 {
+        font-size: 15px;
+    }
+}
+
+.homepage .left h2:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.homepage .left h2:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.left h3 {
+    font-weight: normal;
+    text-wrap: wrap;
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+    width: 420px;
+}
+
+@media (max-width: 430px){
+    .left h3 {
+        font-size: 12px;
+        width: 260px;
+    }
+}
+
+.left button {
+    margin: 20px;
+    padding: 16px 35px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(61, 23, 61);
+    color: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+    box-shadow: 15px 15px 35px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+@media (max-width: 430px){
+    .left button {
+        margin: 15px;
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+}
+
+.left button:hover {
+    background-color: rgb(128, 60, 128);
+}
+
+.right img{
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1024px){
+    .right img{
+        height: 160px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 430px){
+    .right img{
+        height: 120px;
+        margin-bottom: 30px;
+    }
+}
+
+.termsLogo{
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+}
+
+@media (max-width: 430px){
+    .termsLogo{
+        height: 25px;
+        margin-left: 18px;
+        margin-bottom: 0;
+    }
+}
+
+.termLinks {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 430px){
+    .termLinks {
+        gap: 10px;
+        margin-top: auto;
+        margin-bottom: 50px;
+    }
+}
+
+.termLinks a {
+    color: inherit;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 430px){
+    .termLinks a {
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 430px){
+    .termLinks span {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 3px;
+    }
+}
