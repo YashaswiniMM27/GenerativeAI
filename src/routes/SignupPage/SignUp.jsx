@@ -5,7 +5,7 @@ import '../SignupPage/SignUp.css'
 function SignUpage() {
     return (
         <div className='signUp'>
-            <SignUp path="/sign-up" signInUrl='/sign-in'/>
+            <SignUp path="/sign-up" signInUrl='/sign-in' forceRedirectUrl="/dashboard"/>
         </div>
     )
 }
