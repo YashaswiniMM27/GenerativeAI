@@ -20,6 +20,10 @@
     font-weight: bold;
 }
 
+.menu{
+    margin-bottom: 20px;
+}
+
 .options{
     padding: 7px 10px;
     font-size: 14px;
