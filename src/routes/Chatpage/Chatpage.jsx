@@ -6,13 +6,18 @@ function Chatpage() {
     const endRef = useRef(null)
 
     useEffect(() => {
-        endRef.current.scrollIntoView()
-    }, [])
-
+        if (endRef.current) {
+            endRef.current.scrollTo({
+                top: endRef.current.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    }, []);
+    
     return (
         <div className='chatPage'>
             <div className="wrapper">
-                <div className="chat">
+                <div className="chat" ref={endRef}>
                     <div className="message user">Test Message from user Test Message from user Test Message from user Test Message from user Test Message from user Test Message from user</div>
                     <div className="message">Test Message from ai</div>
                     <div className="message user">Test Message from user</div>
@@ -37,7 +42,6 @@ function Chatpage() {
                     <div className="message">Test Message from ai</div>
                     <div className="message user">Test Message from user</div>
                     <div className="message">Test Message from ai</div>
-                    <div ref={endRef}></div>
                 </div>
             </div>
         </div>
