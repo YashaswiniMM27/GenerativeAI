@@ -1,7 +1,7 @@
 import React from 'react'
 import '../RootLayout/RootLayout.css'
-import { Outlet, Link } from 'react-router-dom'
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
+import { Outlet, Link, useLocation } from 'react-router-dom'
+import { ClerkProvider, SignedIn, UserButton } from '@clerk/clerk-react'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -11,10 +11,14 @@ if (!PUBLISHABLE_KEY) {
 
 function RootLayout() {
 
+    const location = useLocation();
+
+    const isHomePage = location.pathname === "/";
+
     return (
         <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
             <div className='rootLayout'>
-                <header>
+                <header className={isHomePage ? "transparent-header" : "solid-header"}>
                     <Link className='logo' to="/">
                     <img src="/assets/favicon.webp" alt="Logo" />
                     <span>GEN-AI</span>
