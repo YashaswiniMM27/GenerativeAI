@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import '../Chatpage/Chatpage.css'
+import NewPrompt from '../../components/newPrompt/NewPrompt';
 
 function Chatpage() {
 
@@ -43,6 +44,7 @@ function Chatpage() {
                     <div className="message user">Test Message from user</div>
                     <div className="message">Test Message from ai</div>
                 </div>
+                <NewPrompt/>
             </div>
         </div>
     )

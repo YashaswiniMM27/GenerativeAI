@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../Dashboard/Dashboard.css'
+import NewPrompt from '../../components/newPrompt/NewPrompt';
 
 function Dashboard() {
 
@@ -30,25 +31,11 @@ function Dashboard() {
 
     return (
         <div className='dashboard'>
-            <div className="text">
+            <div className="title">
                 <img src="/assets/favicon.webp" alt="logo" />
                 <span>GEN-AI</span>
             </div>
-            <div className="formContainer">
-                <form onSubmit={handleSubmit}>
-                    <textarea
-                        ref={textareaRef}
-                        value={value}
-                        onChange={handleChange}
-                        placeholder='Ask me anything...'
-                        rows={1}
-                        style={{ height: height, overflowY: value.length > 0 ? 'auto' : 'hidden',  minHeight: '20px',}}
-                        />
-                    <button type="submit">
-                        <img src="/assets/icons8-arrow-up-30 (1).png" alt="send" />
-                    </button>
-                </form>
-            </div>
+            <NewPrompt/>
         </div>
     )
 }

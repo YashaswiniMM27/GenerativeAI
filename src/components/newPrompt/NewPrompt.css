@@ -1,0 +1,75 @@
+.newPrompt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    flex-shrink: 0;
+}
+
+.newForm{
+    background-color: #2c2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    max-width: 800px;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.attach{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29px;
+    background-color:   #5a526c;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.prompt{
+        height: 100%;
+        width: 100%;
+        resize: none;
+        overflow: auto;
+        word-wrap: break-word;
+        text-wrap: wrap;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: inherit;
+        color: #ffffff !important;
+        padding: 0 20px;
+}
+
+.prompt::placeholder{
+    color: #ececec !important;
+    opacity: 0.6;
+}
+
+.prompt::-webkit-scrollbar {
+    display: none;
+    }
+
+.send{
+    img{
+        height: 16px;
+        width: 16px;
+    }
+    border-radius: 25px;
+    height: 30px;
+    width: 35px;
+    background-color:  #5a526c;
+    border: none;
+    margin: 0 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send:hover, .attach:hover{
+    background-color:  #766d8a;
+}
+
